@@ -4,7 +4,7 @@ public int findKthLargestElement(int[] arr, int k) {
          // 2. no repeated elements
          
          // Method 1 - just using normal PriorityQueue.
-         PriorityQueue minHeap = new PriorityQueue();
+         PriorityQueue q = new PriorityQueue();
          // insert all elements into PQ.
          for (int i=0; i<len; i++) {
              q.add(Comparator.comparing(arr[i]));
