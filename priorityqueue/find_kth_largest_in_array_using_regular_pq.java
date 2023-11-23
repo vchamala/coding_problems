@@ -8,9 +8,6 @@ public int findKthLargestElement(int[] arr, int k) {
          // insert all elements into PQ.
          for (int i=0; i<len; i++) {
              q.add(Comparator.comparing(arr[i]));
-             if (q.size()>k) {
-                 q.poll()
-             }
          }
          
          // now pop n-k elements - so that the topmost is Kth
