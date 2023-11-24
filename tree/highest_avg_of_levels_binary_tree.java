@@ -3,7 +3,6 @@ public int highestAvgLevelsBinaryTree(TreeNode root) {
          q.add(root);
          
          int maxAverage = 0;
-         in count = 0;
          
          whike (!q.isEmpty()) {
              double qlen = q.size(), row = 0;
