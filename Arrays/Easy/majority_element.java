@@ -10,7 +10,8 @@ class Solution {
     
     private void merge(int[] arr, int l, int r) {
         if (l < r) {
-            int mid = l+(r-1)/2;
+            // int mid = l+(r-1)/2;
+            int mid = l + (r - l) / 2;
             merge(arr, l, mid);
             merge(arr, mid+1, r);
             mergeSort(arr, l, mid, r);
@@ -24,11 +25,11 @@ class Solution {
         int[] A1 = new int[n1];
         int[] A2 = new int[n2];
         
-        for (int i=0; i<n1; i++) {
+        for (int i=0; i<n1; ++i) {
             A1[i] = arr[l+i];
         }
         
-        for (int j=0; j<n2; j++) {
+        for (int j=0; j<n2; ++j) {
             A2[j] = arr[mid+1+j];
         }
         
